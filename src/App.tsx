@@ -8,8 +8,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import { Home } from './layouts/Home';
 import { Login } from './layouts/Login';
-import { Dashboard } from './layouts/Dashboard';
-
 import { authSrv } from './services';
 import { NotFoundPage } from './pages/NotFoundPage';
 
@@ -30,12 +28,6 @@ const App = () => {
 
             <Routes>
               <Route path='/' element={<Home />} />
-            </Routes>
-          }
-          Dashboard={
-
-            <Routes>
-              <Route path='/' element={<Dashboard />} />
             </Routes>
           }
         />
@@ -59,8 +51,6 @@ const App = () => {
 interface AuthCheckerProps {
   login: JSX.Element;
   home: JSX.Element;
-  Dashboard: JSX.Element;
-
 }
 
 const AuthChecker = (props: AuthCheckerProps) => {
@@ -97,7 +87,7 @@ const AuthChecker = (props: AuthCheckerProps) => {
     return props.login
   }
 
-  return props.Dashboard
+  return props.home
 }
 
 export default App;

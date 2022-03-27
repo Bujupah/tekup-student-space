@@ -1,4 +1,4 @@
 {
     "token": "some token",
-    "status": 200
+    "status": 401
 }

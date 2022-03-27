@@ -22,7 +22,6 @@ class Singleton {
     const res = await fetch('/mock/error.json', { mode: 'cors' })
     return await res.json()
   }
-
 }
 
 export default new Singleton()
